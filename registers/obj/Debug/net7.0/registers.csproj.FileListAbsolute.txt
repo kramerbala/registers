@@ -1,0 +1,15 @@
+/Users/kramerbalazs/RiderProjects/registers/registers/bin/Debug/net7.0/registers
+/Users/kramerbalazs/RiderProjects/registers/registers/bin/Debug/net7.0/registers.deps.json
+/Users/kramerbalazs/RiderProjects/registers/registers/bin/Debug/net7.0/registers.runtimeconfig.json
+/Users/kramerbalazs/RiderProjects/registers/registers/bin/Debug/net7.0/registers.dll
+/Users/kramerbalazs/RiderProjects/registers/registers/bin/Debug/net7.0/registers.pdb
+/Users/kramerbalazs/RiderProjects/registers/registers/obj/Debug/net7.0/registers.csproj.AssemblyReference.cache
+/Users/kramerbalazs/RiderProjects/registers/registers/obj/Debug/net7.0/registers.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kramerbalazs/RiderProjects/registers/registers/obj/Debug/net7.0/registers.AssemblyInfoInputs.cache
+/Users/kramerbalazs/RiderProjects/registers/registers/obj/Debug/net7.0/registers.AssemblyInfo.cs
+/Users/kramerbalazs/RiderProjects/registers/registers/obj/Debug/net7.0/registers.csproj.CoreCompileInputs.cache
+/Users/kramerbalazs/RiderProjects/registers/registers/obj/Debug/net7.0/registers.dll
+/Users/kramerbalazs/RiderProjects/registers/registers/obj/Debug/net7.0/refint/registers.dll
+/Users/kramerbalazs/RiderProjects/registers/registers/obj/Debug/net7.0/registers.pdb
+/Users/kramerbalazs/RiderProjects/registers/registers/obj/Debug/net7.0/registers.genruntimeconfig.cache
+/Users/kramerbalazs/RiderProjects/registers/registers/obj/Debug/net7.0/ref/registers.dll
