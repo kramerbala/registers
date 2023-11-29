@@ -1,1 +1,218 @@
+Példa:
 
+-- input (file) --
+1,3,5,8
+SUB B B 1
+MOV C B
+ADD C C 1
+JNE 2 C 4
+-- input --
+
+beolvasas utan:
+
+lines[0] = "1,3,5,8"
+lines[1] = "SUB B B 1"
+lines[2] = "MOV C B"
+lines[3] = "ADD C C 1"
+lines[4] = "JNE 2 C 4"
+
+inititalRegisters = ["1", "3", "5", "8"]
+registers = [0,0,0,0]
+
+for loop utan (13. sor)
+
+registers = [1,3,5,8]
+
+for loop start (18. sor)
+----- i = 1 ciklus elem -----
+i = 1
+op = ["SUB", "B", "B", "1"]
+
+feedback = executeTask(registers, op)
+
+function hivas
+
+task = "SUB"
+
+switch -> case: "SUB"
+src = 2
+dest = 2
+val = -1
+
+if (src == -1) HAMIS
+
+lho = initialRegisters[src] (lho = 3)
+
+if (val == -1) IGAZ
+rho = int.Parse(operation[3]) (rho = 1)
+
+initialRegisters[dest] = lho - rho (initialRegisters[2] = 3-1)
+
+return -1
+
+vissza a for loopba (18. sorban kezdodik)
+
+if (feedback != -1) HAMIS
+
+----- i = 1 ciklus elem vege -----
+
+----- i = 2 ciklus elem -----
+
+i = 2
+registers = [1,2,5,8]
+op = ["MOV", "C", "B"]
+
+feedback = executeTask(registers, op)
+
+function hivas
+
+task = "MOV"
+
+switch -> case: "MOV"
+src = 2
+dest = 3
+
+if (src == -1) HAMIS
+
+val = initialRegisters[src] (val = 2)
+
+initialRegisters[dest] = val (initialRegisters[3] = 2)
+
+return -1
+
+vissza a for loopba (18. sorban kezdodik)
+
+if (feedback != -1) HAMIS
+
+----- i = 2 ciklus elem vege -----
+
+----- i = 3 ciklus elem -----
+
+i = 3
+registers = [1,2,2,8]
+op = ["ADD", "C", "C", "1"]
+
+feedback = executeTask(registers, op)
+
+function hivas
+
+task = "ADD"
+
+switch -> case: "ADD"
+src = 3
+dest = 3
+val = -1
+
+if (src == -1) HAMIS
+
+lho = initialRegisters[src] (lho = 2)
+
+if (val == -1) IGAZ
+rho = int.Parse(operation[3]) (rho = 1)
+
+initialRegisters[dest] = lho + rho (initialRegisters[3] = 2+1)
+
+return -1
+
+vissza a for loopba (18. sorban kezdodik)
+
+if (feedback != -1) HAMIS
+
+----- i = 3 ciklus elem vege -----
+
+----- i = 4 ciklus elem -----
+
+i = 4
+registers = [1,2,3,8]
+op = ["JNE", "2", "C", "4"]
+
+feedback = executeTask(registers, op)
+
+function hivas
+
+task = "JNE"
+
+switch -> case: "JNE"
+src = 3
+val = -1
+
+if (val == -1) IGAZ
+val = int.Parse(operation[3]) (rho = 4)
+
+if (val == initialRegisters[src]) HAMIS
+
+return int.Parse(operation[1]) (return 2)
+
+vissza a for loopba (18. sorban kezdodik)
+
+if (feedback != -1) IGAZ
+
+i = 3
+
+----- i = 4 ciklus elem vege -----
+
+----- i = 3 ciklus elem -----
+
+i = 3
+registers = [1,2,3,8]
+op = ["ADD", "C", "C", "1"]
+
+feedback = executeTask(registers, op)
+
+function hivas
+
+task = "ADD"
+
+switch -> case: "ADD"
+src = 3
+dest = 3
+val = -1
+
+if (src == -1) HAMIS
+
+lho = initialRegisters[src] (lho = 3)
+
+if (val == -1) IGAZ
+rho = int.Parse(operation[3]) (rho = 1)
+
+initialRegisters[dest] = lho + rho (initialRegisters[3] = 3+1)
+
+return -1
+
+
+vissza a for loopba (18. sorban kezdodik)
+
+if (feedback != -1) HAMIS
+
+----- i = 3 ciklus elem vege -----
+
+----- i = 4 ciklus elem -----
+
+i = 4
+registers = [1,2,4,8]
+op = ["JNE", "2", "C", "4"]
+
+feedback = executeTask(registers, op)
+
+function hivas
+
+task = "JNE"
+
+switch -> case: "JNE"
+src = 3
+val = -1
+
+if (val == -1) IGAZ
+val = int.Parse(operation[3]) (rho = 4)
+
+if (val == initialRegisters[src]) IGAZ
+
+return -1
+
+----- i = 4 ciklus elem vege -----
+
+veget er a for loop (18. sorban kezdodik)
+
+filba irasa a regisztereknek
+
+vege a programnak
