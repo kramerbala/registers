@@ -215,4 +215,8 @@ veget er a for loop (18. sorban kezdodik)
 
 filba irasa a regisztereknek
 
+--- output (file) ---
+1,2,4,8
+--- output (file) ---
+
 vege a programnak
